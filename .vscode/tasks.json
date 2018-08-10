@@ -1,0 +1,36 @@
+{
+    "version": "0.1.0",
+    "command": "npm",
+    "isShellCommand": true,
+    "echoCommand": false,
+    "suppressTaskName": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "args": [
+                "run",
+                "start"
+            ],
+            "isBackground": true,
+            "taskName": "dev"
+        },
+        {
+            "args": [
+                "run",
+                "build"
+            ],
+            "taskName": "build",
+            "isBuildCommand": true
+        },
+        {
+            "args": [
+                "install",
+                "--progress",
+                "false",
+                "--loglevel",
+                "http"
+            ],
+            "taskName": "install"
+        }
+    ]
+}

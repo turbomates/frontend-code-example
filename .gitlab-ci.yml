@@ -1,0 +1,30 @@
+image: node:9-onbuild
+
+variables:
+  PROJECT: "no-deploy"
+  STAGE: "dev"
+
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - 'which ssh-agent || ( apt-get -y update && apt-get -y install openssh-client )'
+  - 'which rsync || ( apt-get -y update && apt-get -y install rsync )'
+  - npm install -g yarn
+  - eval $(ssh-agent -s)
+  - ssh-add <(echo "$SSH_PRIVATE_KEY")
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - triggers
+  script:
+    - yarn --silent --no-progress
+    - yarn build $STAGE
+    - node_modules/.bin/shipit $STAGE deploy

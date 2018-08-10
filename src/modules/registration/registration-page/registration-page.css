@@ -1,0 +1,14 @@
+.registration-page {
+    &__wrapper {
+        display: flex;
+    }
+
+    &__column {
+        flex: 1;
+    }
+
+    .input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

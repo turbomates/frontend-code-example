@@ -1,0 +1,35 @@
+.notifier {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+
+    &__message {
+        padding: 15px;
+        margin: 15px;
+        font-size: 17px;
+        animation: swipeFromRight;
+        opacity: 0.6;
+        animation-duration: 0.7s;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__message_success {
+        background-color: var(--color-success);
+    }
+
+    &__message_error {
+        background-color: var(--color-error);
+    }
+}
+
+@keyframes swipeFromRight {
+    0% {
+        right: -500px;
+    }
+    100% {
+        right: 0;
+    }
+}

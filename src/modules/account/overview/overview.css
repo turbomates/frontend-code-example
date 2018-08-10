@@ -1,0 +1,45 @@
+.overview {
+    &__content-block {
+        padding: 0 50px;
+    }
+
+    &__form {
+        padding-bottom: 20px;
+    }
+
+    &__fieldset {
+        margin: 0 -50px 0;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        padding: 9px 50px 8px;
+        min-height: 32px;
+    }
+
+    &__row:nth-child(2n-1) {
+        background-color: var(--color-main-fade);
+    }
+
+    &__row:last-child {
+        border-bottom: 1px solid var(--color-main-fade);
+    }
+
+    &__row-label {
+        flex: 0 0 86px;
+        min-width: 110px;
+        color: var(--color-accent);
+        font-size: 13px;
+        font-weight: 300;
+        padding-right: 10px;
+    }
+
+    &__row-values {
+        font-weight: 600;
+    }
+
+    &__btn {
+        margin: 10px 0 0 0;
+    }
+}

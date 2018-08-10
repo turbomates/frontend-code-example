@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+        "jsx": "react",
+        "declaration": false,
+        "allowSyntheticDefaultImports": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "pretty": true,
+        "removeComments": false,
+        "baseUrl": "./src",
+        "outDir": "out/",
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es2015",
+            "es2016",
+            "es2017.object",
+            "scripthost"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [
+        "typings/lib.d.ts",
+        "src/index.tsx"
+    ]
+}

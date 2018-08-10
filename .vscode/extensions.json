@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "eg2.tslint",
+        "alefragnani.project-manager",
+        "Zignd.html-css-class-completion",
+        "robertohuertasm.vscode-icons",
+        "TwentyChung.jsx",
+        "esbenp.prettier-vscode"
+    ]
+}

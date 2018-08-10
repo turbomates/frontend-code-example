@@ -1,0 +1,22 @@
+.account {
+    &__menu {
+        overflow: hidden;
+        text-transform: capitalize;
+        list-style: none;
+
+        .aside__item .aside__link.active {
+            color: var(--color-accent);
+        }
+    }
+
+
+    &__title {
+        color: var(--color-accent);
+        padding: 23px 0 17px;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0;
+    }
+}
